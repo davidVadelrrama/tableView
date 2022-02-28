@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+	<children>
+		<TableView fx:id="studentTable" layoutX="14.0" layoutY="36.0" prefHeight="355.0" prefWidth="452.0">
+			<columns>
+				<TableColumn fx:id="nameCOL" prefWidth="145.0" text="nombre" />
+				<TableColumn fx:id="codeCOL" prefWidth="147.0" text="codigo" />
+				<TableColumn fx:id="natIDCOL" prefWidth="159.0" text="cedula" />
+			</columns>
+		</TableView>
+		<ImageView fitHeight="107.0" fitWidth="172.0" layoutX="479.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+			<image>
+				<Image url="@../../../../../Downloads/happy-d-og.gif" />
+			</image>
+		</ImageView>
+		<Button fx:id="deleteBTN" layoutX="495.0" layoutY="131.0" mnemonicParsing="false" onAction="#deleteStudent" onMouseClicked="#changeColor" prefHeight="36.0" prefWidth="76.0" text="delete">
+			<font>
+				<Font name="HoloLens MDL2 Assets" size="15.0" />
+			</font>
+		</Button>
+		<MenuBar>
+			<menus>
+				<Menu mnemonicParsing="false" text="File">
+					<items>
+						<Menu mnemonicParsing="false" text="Nuevo">
+							<items>
+								<MenuItem mnemonicParsing="false" onAction="#addNewStudent" text="Estudiante" />
+							</items>
+						</Menu>
+						<SeparatorMenuItem mnemonicParsing="false" />
+						<MenuItem mnemonicParsing="false" onAction="#closeMenu" text="Close" />
+					</items>
+				</Menu>
+			</menus>
+		</MenuBar>
+	</children>
+</AnchorPane>
